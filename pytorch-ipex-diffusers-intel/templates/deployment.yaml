@@ -1,0 +1,42 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: pytorch-ipex-diffusers-intel
+spec:
+  selector:
+    matchLabels:
+      app: pytorch-ipex-diffusers-intel
+  template:
+    metadata:
+      labels:
+        app: pytorch-ipex-diffusers-intel
+    spec:
+      containers:
+        - name: {{ .Chart.Name }}
+          image: {{ .Values.image.repository }}:{{ .Values.image.tag }}
+          imagePullPolicy: {{ .Values.image.pullPolicy }}
+          command: {{ .Values.command }}
+          args: {{ .Values.args }}
+          resources:
+            {{- toYaml .Values.resources | nindent 12 }}
+          volumeMounts:
+            - name: {{ .Values.volumeMountName }}
+              mountPath: {{ .Values.volumeMountPath }}
+      volumes:
+        - hostPath:
+            path: {{ .Values.volumeHostPath }}
+            type: {{ .Values.volumeHostPathType }}
+          name: {{ .Values.volumeMountName }}
+      hostNetwork: {{ .Values.hostNetwork }}
+      {{- with .Values.nodeSelector }}
+      nodeSelector:
+        {{- toYaml . | nindent 8 }}
+      {{- end }}
+      {{- with .Values.affinity }}
+      affinity:
+        {{- toYaml . | nindent 8 }}
+      {{- end }}
+      {{- with .Values.tolerations }}
+      tolerations:
+        {{- toYaml . | nindent 8 }}
+      {{- end }}

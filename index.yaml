@@ -1,0 +1,18 @@
+apiVersion: v1
+entries:
+  pytorch-ipex-diffusers-intel:
+  - apiVersion: v2
+    appVersion: 0.1.0
+    created: "2023-12-28T14:23:10.480575233+08:00"
+    description: A Helm chart for pytorch-ipex-diffusers-intel
+    digest: fbe404fcdc4ad3b141e03e1655ccfeaa190ff32a9563a62b2c483ab5f5004708
+    keywords:
+    - pytorch
+    - ipex
+    - diffusers
+    - stable diffusion
+    name: pytorch-ipex-diffusers-intel
+    urls:
+    - https://vivianzh.github.io/helm-chart/pytorch-ipex-diffusers-intel-0.1.0.tgz
+    version: 0.1.0
+generated: "2023-12-28T14:23:10.480262823+08:00"

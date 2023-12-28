@@ -1,0 +1,30 @@
+# Default values for pytorch-ipex-diffusers-intel.
+# This is a YAML-formatted file.
+# Declare variables to be passed into your templates.
+
+image:
+  repository: registry.cn-hangzhou.aliyuncs.com/cloudnativeforai/pytorch-ipex-diffusers-intel
+  tag: devel
+  pullPolicy: IfNotPresent
+
+resources:
+  requests:
+    cpu: 32
+    memory: 64Gi
+  limits:
+    cpu: 32
+    memory: 64Gi
+
+command: '["/bin/bash"]'
+args: '["-c", "while true; do sleep 30; done;"]'
+
+volumeMountName: datavolume
+volumeMountPath: /data/models
+volumeHostPath: /data
+volumeHostPathType: Directory
+
+hostNetwork: false
+
+nodeSelector: {}
+affinity: {}
+tolerations: []
