@@ -1,6 +1,4 @@
-# helm-chart
-
-## helm的chart仓库地址为：https://vivianzh.github.io/helm-chart
+## helm chart仓库地址为：https://vivianzh.github.io/helm-chart
 
 ## 使用方法
 
@@ -27,6 +25,7 @@ myrepo/pytorch-ipex-diffusers-intel     0.1.0           0.1.0           A Helm c
 4、安装
 ```
 # helm install xxx myrepo/pytorch-ipex-diffusers-intel
+```
 
 以下是目前支持的配置选项和默认值
 ```
