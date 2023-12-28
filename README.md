@@ -47,7 +47,7 @@ volumeHostPathType             Directory type                    Directory
 hostNetwork                    Whether to use the hostnetwork    false
 ```
 
-例如：将host目录/mnt/test mount到/data/models
+例如：将host目录/mnt/test挂载到/data/models
 ```
-#helm install --set volumeHostPath=/mnt/test xxx  myrepo/pytorch-ipex-diffusers-inte
+#helm install --set volumeHostPath=/mnt/test xxx  myrepo/pytorch-ipex-diffusers-intel
 ```
