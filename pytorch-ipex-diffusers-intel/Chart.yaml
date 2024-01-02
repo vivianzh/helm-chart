@@ -1,5 +1,5 @@
 apiVersion: v2
-appVersion: 0.1.0
+appVersion: 0.2.0
 description: A Helm chart for pytorch-ipex-diffusers-intel
 keywords:
 - pytorch
@@ -7,4 +7,4 @@ keywords:
 - diffusers
 - stable diffusion
 name: pytorch-ipex-diffusers-intel
-version: 0.1.0
+version: 0.2.0

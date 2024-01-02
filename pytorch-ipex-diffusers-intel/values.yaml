@@ -4,7 +4,7 @@
 
 image:
   repository: registry.cn-hangzhou.aliyuncs.com/cloudnativeforai/pytorch-ipex-diffusers-intel
-  tag: devel
+  tag: devel2
   pullPolicy: IfNotPresent
 
 resources:
