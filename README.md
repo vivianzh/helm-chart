@@ -1,5 +1,3 @@
-## helm chart仓库地址为：https://vivianzh.github.io/helm-chart
-
 ## 使用方法
 
 1、添加chart仓库
